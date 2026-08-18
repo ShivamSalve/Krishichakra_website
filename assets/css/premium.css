@@ -758,13 +758,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ========================
-   STATS STRIP
+   STATS STRIP (Refined to match Reference Design)
    ======================== */
 .kc-stats {
-  background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-cream-3) 100%);
+  background: var(--color-cream);
   border-top: 1px solid var(--color-cream-2);
   border-bottom: 1px solid var(--color-cream-2);
-  padding: 64px 0;
+  padding: 56px 0;
+  position: relative;
 }
 .kc-stats-inner {
   display: grid;
@@ -775,26 +776,52 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 48px;
 }
 .kc-stat-item {
-  text-align: center;
-  padding: 24px;
-  border-right: 1px solid var(--color-cream-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 24px;
+  border-right: 1.5px dashed rgba(45,80,22,0.18);
   position: relative;
+  transition: transform 0.3s var(--ease-smooth);
 }
 .kc-stat-item:last-child { border-right: none; }
+.kc-stat-item:hover {
+  transform: translateY(-2px);
+}
+.kc-stat-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.kc-stat-content {
+  display: flex;
+  flex-direction: column;
+}
 .kc-stat-number {
   font-family: var(--font-heading);
-  font-size: 3rem;
-  font-weight: 900;
-  color: var(--color-forest);
-  letter-spacing: -0.04em;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--color-charcoal);
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  display: flex;
+  align-items: flex-start;
+}
+.kc-stat-plus {
+  color: #E07A2B;
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-left: 2px;
   line-height: 1;
-  margin-bottom: 8px;
 }
 .kc-stat-label {
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.875rem;
+  font-weight: 600;
   color: var(--color-muted);
-  letter-spacing: 0.05em;
+  margin-top: 2px;
+  white-space: nowrap;
 }
 
 /* ========================

@@ -213,24 +213,35 @@
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
         const el = entry.target;
-        const target = parseFloat(el.dataset.target || el.textContent);
+        const target = parseFloat(el.dataset.target || 0);
+        if (isNaN(target)) return;
+        
         const suffix = el.dataset.suffix || '';
         const prefix = el.dataset.prefix || '';
-        const duration = 2000;
+        const duration = 2200; // 2.2 seconds smooth ease-out
         const start = performance.now();
 
         function update(now) {
           const elapsed = now - start;
           const progress = Math.min(elapsed / duration, 1);
-          const eased = 1 - Math.pow(1 - progress, 4);
+          // Ultra-smooth cubic ease out
+          const eased = 1 - Math.pow(1 - progress, 3.5);
           const current = Math.round(eased * target);
-          el.textContent = prefix + current + suffix;
-          if (progress < 1) requestAnimationFrame(update);
+          
+          // Format with commas if target >= 1000
+          const formatted = current.toLocaleString('en-US');
+          el.textContent = prefix + formatted + suffix;
+
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          } else {
+            el.textContent = prefix + target.toLocaleString('en-US') + suffix;
+          }
         }
         requestAnimationFrame(update);
         observer.unobserve(el);
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.3 });
 
     counters.forEach(el => observer.observe(el));
   }

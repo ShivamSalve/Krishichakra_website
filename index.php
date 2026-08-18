@@ -228,37 +228,93 @@
 
 <!-- ============================================================
      STATS STRIP
-     Key brand numbers
+     Key brand numbers matching reference design
+     ============================================================ -->
+<!-- ============================================================
+     STATS STRIP
+     Key brand numbers matching reference design
      ============================================================ -->
 <section class="kc-stats" aria-label="Company statistics">
   <div class="kc-stats-inner kc-stagger">
 
+    <!-- Stat 1: Satisfied Clients -->
     <div class="kc-stat-item">
-      <div class="kc-stat-number">
-        <span class="kc-count-num" data-target="8" data-suffix="+">8+</span>
+      <div class="kc-stat-icon">
+        <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="#E07A2B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="24" cy="16" r="8"/>
+          <path d="M10 40c0-7.7 6.3-14 14-14s14 6.3 14 14"/>
+          <path d="M6 34l3-3 2 2 4-4" stroke="#E07A2B"/>
+          <path d="M42 34l-3-3-2 2-4-4" stroke="#E07A2B"/>
+        </svg>
       </div>
-      <p class="kc-stat-label">Dehydrated Products</p>
+      <div class="kc-stat-content">
+        <div class="kc-stat-number">
+          <span class="kc-count-num" data-target="1542">0</span>
+          <span class="kc-stat-plus">+</span>
+        </div>
+        <p class="kc-stat-label">Satisfied Clients</p>
+      </div>
     </div>
 
+    <!-- Stat 2: Expert Team -->
     <div class="kc-stat-item">
-      <div class="kc-stat-number">
-        <span class="kc-count-num" data-target="10" data-suffix="+">10+</span>
+      <div class="kc-stat-icon">
+        <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="#E07A2B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="24" cy="14" r="6"/>
+          <circle cx="12" cy="24" r="5"/>
+          <circle cx="36" cy="24" r="5"/>
+          <path d="M15 38c0-5 4-9 9-9s9 4 9 9"/>
+          <path d="M6 40c0-4 3-7 6-7"/>
+          <path d="M42 40c0-4-3-7-6-7"/>
+          <path d="M24 20v9"/>
+          <path d="M17 24l7 5 7-5"/>
+        </svg>
       </div>
-      <p class="kc-stat-label">Certifications</p>
+      <div class="kc-stat-content">
+        <div class="kc-stat-number">
+          <span class="kc-count-num" data-target="182">0</span>
+          <span class="kc-stat-plus">+</span>
+        </div>
+        <p class="kc-stat-label">Expert Team</p>
+      </div>
     </div>
 
+    <!-- Stat 3: Activate Products -->
     <div class="kc-stat-item">
-      <div class="kc-stat-number">
-        <span class="kc-count-num" data-target="20" data-suffix="+">20+</span>
+      <div class="kc-stat-icon">
+        <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="#E07A2B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M24 6l16 8v14l-16 8-16-8V14l16-8z"/>
+          <path d="M8 14l16 8 16-8"/>
+          <path d="M24 22v14"/>
+          <circle cx="24" cy="30" r="4" fill="#E07A2B" stroke="none"/>
+          <path d="M24 27v6M21 30h6" stroke="#fff" stroke-width="1.8"/>
+        </svg>
       </div>
-      <p class="kc-stat-label">Countries Exported To</p>
+      <div class="kc-stat-content">
+        <div class="kc-stat-number">
+          <span class="kc-count-num" data-target="285">0</span>
+          <span class="kc-stat-plus">+</span>
+        </div>
+        <p class="kc-stat-label">Activate Products</p>
+      </div>
     </div>
 
+    <!-- Stat 4: Award Winning -->
     <div class="kc-stat-item">
-      <div class="kc-stat-number">
-        <span class="kc-count-num" data-target="5000" data-suffix="T+">5000T+</span>
+      <div class="kc-stat-icon">
+        <svg viewBox="0 0 48 48" width="44" height="44" fill="none" stroke="#E07A2B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="24" cy="18" r="12"/>
+          <path d="M24 10l2 4 4.5.6-3.2 3.1.8 4.3-4.1-2.1-4.1 2.1.8-4.3-3.2-3.1 4.5-.6z" fill="rgba(224,122,43,0.15)"/>
+          <path d="M17 28l-4 14 11-4 11 4-4-14"/>
+        </svg>
       </div>
-      <p class="kc-stat-label">Annual Capacity</p>
+      <div class="kc-stat-content">
+        <div class="kc-stat-number">
+          <span class="kc-count-num" data-target="27">0</span>
+          <span class="kc-stat-plus">+</span>
+        </div>
+        <p class="kc-stat-label">Award Winning</p>
+      </div>
     </div>
 
   </div>
