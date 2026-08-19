@@ -5,13 +5,13 @@
  */
 
 // Always resolve PHP includes and working directory from the project root.
-$PROJECT_ROOT = dirname(__DIR__);
+$PROJECT_ROOT = realpath(__DIR__ . '/..') ?: dirname(__DIR__);
 chdir($PROJECT_ROOT);
 
 $uri = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
 $path = ltrim($uri, '/');
 
-if ($path === '' || $path === 'index.php') {
+if ($path === '' || $path === 'index.php' || $path === 'api/index.php') {
     require $PROJECT_ROOT . '/index.php';
     exit;
 }
