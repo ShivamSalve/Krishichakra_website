@@ -4,8 +4,27 @@
  * Vercel Serverless PHP Router
  */
 
-// Always resolve PHP includes and working directory from the project root.
-$PROJECT_ROOT = realpath(__DIR__ . '/..') ?: dirname(__DIR__);
+// Dynamically locate the project root directory containing index.php, header.php, etc.
+$possibleRoots = [
+    dirname(__DIR__),
+    __DIR__ . '/..',
+    $_SERVER['DOCUMENT_ROOT'] ?? '',
+    '/var/task/user',
+    '/var/task'
+];
+
+$PROJECT_ROOT = null;
+foreach ($possibleRoots as $dir) {
+    if ($dir && file_exists($dir . '/header.php')) {
+        $PROJECT_ROOT = realpath($dir) ?: $dir;
+        break;
+    }
+}
+
+if (!$PROJECT_ROOT) {
+    $PROJECT_ROOT = dirname(__DIR__);
+}
+
 chdir($PROJECT_ROOT);
 
 $uri = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH);
