@@ -2,7 +2,15 @@
 /**
  * Krishichakra Foods Private Limited
  * Homepage — Premium Redesign v2.0
+ *
+ * This file is deployed as /api/index.php on Vercel.
+ * The project files (header.php, footer.php, assets/, etc.)
+ * remain one directory above /api.
  */
+
+// Always resolve PHP includes from the project root, not /api.
+$PROJECT_ROOT = dirname(__DIR__);
+chdir($PROJECT_ROOT);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,9 +23,12 @@
   <meta property="og:title" content="Krishichakra Foods Private Limited">
   <meta property="og:description" content="Premium dehydrated foods manufacturer and exporter from India.">
   <meta property="og:type" content="website">
+
+  <!-- All browser-relative URLs resolve from the project root. -->
+  <base href="/">
 </head>
 
-<?php include('header.php'); ?>
+<?php include $PROJECT_ROOT . '/header.php'; ?>
 
 <!-- ============================================================
      HERO SECTION
@@ -782,4 +793,4 @@
   </div>
 </section>
 
-<?php include('footer.php'); ?>
+<?php include $PROJECT_ROOT . '/footer.php'; ?>
