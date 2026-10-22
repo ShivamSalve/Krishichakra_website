@@ -66,6 +66,10 @@
         <a href="contact-us.php" class="kc-btn kc-btn-ghost kc-btn-lg" id="btn-get-quote">
           Get a Quote
         </a>
+        <a href="#facility" class="kc-btn kc-btn-youtube kc-btn-lg" id="btn-youtube-video">
+          <svg class="kc-btn-icon-yt" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          Watch on YouTube
+        </a>
       </div>
 
     </div><!-- /kc-hero-text -->
@@ -492,6 +496,68 @@
 
   </div><!-- /kc-container -->
 </section><!-- /products -->
+
+
+<!-- ============================================================
+     FACILITY SECTION
+     High-definition video tour of manufacturing facility
+     ============================================================ -->
+<section id="facility" class="kc-facility-section" aria-label="Our Facility">
+  <div class="kc-container">
+
+    <div class="kc-facility-header kc-reveal">
+      <div class="kc-facility-logo">
+        <img src="assets/img/logo.png" alt="Krishichakra Foods" loading="lazy">
+      </div>
+      <h2>Facility</h2>
+      <p>Take a virtual tour of our state-of-the-art dehydration and processing infrastructure in Shahada, Maharashtra.</p>
+    </div>
+
+    <div class="kc-video-container kc-reveal" id="facility-video-wrap">
+      <div class="kc-video-poster" id="kc-facility-poster" style="background-image: url('assets/img/facility-thumbnail.jpg');" role="button" aria-label="Play Krishichakra Foods Facility Video" tabindex="0">
+        <button class="kc-video-play-btn" aria-label="Play facility video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </button>
+      </div>
+      <div class="kc-video-iframe-wrap" id="kc-facility-iframe" style="display:none;"></div>
+    </div>
+
+  </div><!-- /kc-container -->
+</section><!-- /facility -->
+
+
+<!-- ============================================================
+     YOUTUBE VIDEO SECTION — Farm to Fork
+     ============================================================ -->
+<section id="farm-to-fork-video" class="kc-yt-section" aria-label="Farm to Fork video">
+  <div class="kc-container">
+
+    <div class="kc-section-header center kc-reveal">
+      <span class="kc-eyebrow">Watch &amp; Learn</span>
+      <h2>Farm to Fork — Every Step Matters</h2>
+      <p>See how Krishichakra Foods transforms nature's finest produce into premium dehydrated ingredients — from the farm all the way to your kitchen.</p>
+    </div>
+
+    <div class="kc-yt-embed-wrap kc-reveal">
+      <iframe
+        id="kc-farm-fork-yt"
+        src="https://www.youtube.com/embed/Y6UxCCDL9Sw?rel=0&amp;modestbranding=1"
+        title="Farm to Fork — Krishichakra Foods"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <div class="kc-yt-cta kc-reveal">
+      <a href="https://www.youtube.com/watch?v=Y6UxCCDL9Sw" target="_blank" rel="noopener noreferrer" class="kc-btn kc-btn-youtube kc-btn-lg" id="btn-watch-youtube">
+        <svg class="kc-btn-icon-yt" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        Watch on YouTube
+      </a>
+    </div>
+
+  </div>
+</section><!-- /farm-to-fork-video -->
 
 
 <!-- ============================================================
